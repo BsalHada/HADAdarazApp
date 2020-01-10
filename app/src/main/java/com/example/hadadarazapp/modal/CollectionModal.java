@@ -3,10 +3,6 @@ package com.example.hadadarazapp.modal;
 public class CollectionModal {
 
     private String collection_id;
-    private String c_title;
-    private String c_intro;
-    private String image;
-    private String background;
 
     public String getCollection_id() {
         return collection_id;
@@ -36,6 +32,13 @@ public class CollectionModal {
         return image;
     }
 
+    private String c_title;
+    private String c_intro;
+    private String image;
+    private String background;
+
+
+
     public void setImage(String image) {
         this.image = image;
     }
@@ -48,11 +51,11 @@ public class CollectionModal {
         this.background = background;
     }
 
-    @Override
-    public String toString()
-    {
-        return "tbl_collection [collection_id = "+collection_id+", c_title = "+c_title+"," +
-                " c_intro = "+c_intro+", image = "+image+", background = "+background+"]";
-    }
+//    @Override
+//    public String toString()
+//    {
+//        return "tbl_collection [collection_id = "+collection_id+", c_title = "+c_title+"," +
+//                " c_intro = "+c_intro+", image = "+image+", background = "+background+"]";
+//    }
 
 }

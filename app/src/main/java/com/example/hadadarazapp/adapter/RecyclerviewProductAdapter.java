@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hadadarazapp.modal.ProductModal;
 import com.example.hadadarazapp.R;
+import com.example.hadadarazapp.retrofit_class.Client;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -40,15 +41,10 @@ public class RecyclerviewProductAdapter extends RecyclerView.Adapter<Recyclervie
         //// getting data according to position
         final ProductModal productModal = productModals.get(position);
 
-        holder.txt_item_product_name.setText(productModal.getProduct_name());
-        holder.txt_item_product_price.setText(productModal.getProduct_price());
+        holder.txt_item_product_name.setText(productModal.getName());
+        holder.txt_item_product_price.setText(productModal.getPrice());
 
-        // get Product Image
-        Picasso.get()
-                .load("http://www.piyushp.com.np/sport_fanatic/api/member/image/daraz_image/product/"+productModal.getProduct_image())
-                .placeholder(R.drawable.ic_launcher_background)
-                .resize(220, 220)
-                .centerCrop()
+        Picasso.get().load(Client.image_url+productModals.get(position).getProduct_image())
                 .into(holder.item_product_image);
     }
 
@@ -64,7 +60,6 @@ public class RecyclerviewProductAdapter extends RecyclerView.Adapter<Recyclervie
 
         public MyViewHolder(View itemView) {
             super(itemView);
-
             txt_item_product_name = itemView.findViewById(R.id.txtProductName);
             txt_item_product_price = itemView.findViewById(R.id.txtPrice);
             item_product_image = itemView.findViewById(R.id.imgProduct);

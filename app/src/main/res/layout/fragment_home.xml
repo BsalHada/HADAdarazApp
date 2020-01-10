@@ -72,17 +72,10 @@
                         android:layout_height="130dp"
                         android:layout_marginBottom="25dp">
 
-                        <androidx.viewpager.widget.ViewPager
-                            android:id="@+id/pager"
-                            android:layout_width="fill_parent"
-                            android:layout_height="fill_parent"
-                            android:layout_alignParentTop="true" />
-
-                        <me.relex.circleindicator.CircleIndicator
-                            android:id="@+id/indicator"
+                        <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="48dp"
-                            android:layout_alignParentBottom="true" />
+                            android:background="@drawable/darazupperbanner"
+                            android:layout_height="wrap_content"/>
 
                     </RelativeLayout>
 
@@ -90,7 +83,7 @@
                         android:id="@+id/adsImage"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
-                        android:background="@drawable/ads"
+                        android:background="@drawable/daraznewyearoffer"
                         android:scaleType="centerCrop" />
 
                     <LinearLayout

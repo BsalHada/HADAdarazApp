@@ -55,18 +55,6 @@ public class DashboardActivity extends AppCompatActivity {
                         setFragment(homeFragment);
                         return true;
 
-                    case R.id.nav_message:
-                        setFragment(messageFragment);
-                        return true;
-
-                    case R.id.nav_cart:
-                        setFragment(cartFragment);
-                        return true;
-
-                    case R.id.nav_account:
-                        setFragment(accountFragment);
-                        return true;
-
                     default:
                         return false;
                 }

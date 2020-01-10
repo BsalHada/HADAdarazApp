@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hadadarazapp.modal.CollectionModal;
 import com.example.hadadarazapp.R;
+import com.example.hadadarazapp.retrofit_class.Client;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -43,21 +44,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         holder.txt_item_collection_title.setText(collectionModal.getC_title());
         holder.txt_item_collection_des.setText(collectionModal.getC_intro());
 
-        // get Player cover
-        Picasso.get()
-                .load("http://www.piyushp.com.np/sport_fanatic/api/member/image/daraz_image/collection/"+collectionModal.getImage())
-                .placeholder(R.drawable.ic_launcher_background)
-                .resize(180,180)
-                .centerCrop()
+        Picasso.get().load(Client.image_url+collectionModals.get(position).getImage())
                 .into(holder.item_collection_image);
-
-        // get Player cover
-        Picasso.get()
-                .load("http://www.piyushp.com.np/sport_fanatic/api/member/image/daraz_image/collection/"+collectionModal.getBackground())
-                .placeholder(R.drawable.collection_banner)
-                .resize(180,180)
-                .centerCrop()
-                .into(holder.item_background_image);
 
     }
 
